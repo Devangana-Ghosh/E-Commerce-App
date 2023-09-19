@@ -38,7 +38,6 @@ class _CheckoutPageState extends State<CheckoutPage> {
     return totalPrice;
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +51,10 @@ class _CheckoutPageState extends State<CheckoutPage> {
           children: [
             Text(
               'Payment Details',
-              style: Theme.of(context).textTheme.headline6,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             SizedBox(height: 16),
             TextFormField(
@@ -95,11 +97,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-
+                // Implement payment processing logic here
               },
               child: Text('Process Payment'),
             ),
-            SizedBox(height: 400 ),
+            SizedBox(height: 16),
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
@@ -113,11 +115,15 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 children: [
                   Text(
                     'Total Price:',
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Text(
                     '\$${_totalPrice.toStringAsFixed(2)}',
-                    style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                    style: TextStyle(
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

@@ -40,7 +40,7 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cart'),
+        title: Text('Cart (${cartBox.length})'),
       ),
       body: Column(
         children: [
@@ -59,12 +59,11 @@ class _CartPageState extends State<CartPage> {
                     width: 50,
                     height: 50,
                   ),
-                  trailing: IconButton(
-                    icon: Icon(Icons.remove),
-                    onPressed: () {
-                      removeFromCart(index);
-                    },
-                  ),
+    trailing: IconButton(
+    icon: Icon(Icons.remove),
+    onPressed: () {
+    removeFromCart(index); },
+    ),
                 );
               },
             ),
@@ -74,12 +73,21 @@ class _CartPageState extends State<CartPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Total Price: \$${getTotalPrice()}'),
+                Text(
+                  'Total Price: \$${getTotalPrice()}',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CheckoutPage(cartItems: cartBox.values.toList())),
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            CheckoutPage(cartItems: cartBox.values.toList()),
+                      ),
                     );
                   },
                   child: Text('Checkout'),
@@ -94,8 +102,7 @@ class _CartPageState extends State<CartPage> {
 }
 
 
-
-class ProductList extends StatefulWidget {
+  class ProductList extends StatefulWidget {
   @override
   _ProductListState createState() => _ProductListState();
 }
