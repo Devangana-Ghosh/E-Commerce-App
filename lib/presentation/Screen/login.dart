@@ -17,12 +17,6 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: theme.backgroundColor,
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/background.jpg'), // Replace with your image asset
-              fit: BoxFit.cover,
-            ),
-          ),
           width: double.infinity,
           padding: EdgeInsets.all(24.0),
           child: Column(
