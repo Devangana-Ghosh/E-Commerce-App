@@ -3,12 +3,6 @@ import '../widgets/custom_button.dart';
 import '../widgets/custom_input.dart';
 import '../widgets/products.dart';
 
-import 'package:flutter/material.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_input.dart';
-import '../widgets/products.dart';
-import 'constants.dart';
-
 class LoginPage extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -17,14 +11,14 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context); // Access the current theme
+    final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: theme.backgroundColor, // Use theme.backgroundColor
+      backgroundColor: theme.backgroundColor,
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
-          padding: EdgeInsets.all(24.0), // Add padding
+          padding: EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -44,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 20.0),
               CustomInput(
                 hintText: "Password",
-                isPassword: true, // Hide password text
+                isPassword: true,
               ),
               SizedBox(height: 20.0),
               CustomBtn(

@@ -8,7 +8,7 @@ class CustomBtn extends StatelessWidget {
   CustomBtn({
     required this.text,
     required this.onPressed,
-    this.outlineBtn = false, // Provide a default value
+    this.outlineBtn = false,
   });
 
   @override

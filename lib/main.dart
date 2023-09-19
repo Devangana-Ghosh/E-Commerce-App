@@ -43,9 +43,9 @@ class MyApp extends StatelessWidget {
               actions: [
                 IconButton(
                   icon: Icon(Icons.lightbulb_outline),
-                  color: Colors.black, // Set the color here
+                  color: Colors.black,
                   onPressed: () {
-                    themeProvider.toggleTheme(); // Toggle between light and dark mode
+                    themeProvider.toggleTheme();
                   },
                 ),
               ],

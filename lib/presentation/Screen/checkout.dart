@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 import '../widgets/cart_item.dart';
 
 class CheckoutPage extends StatefulWidget {
@@ -97,7 +95,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                // Implement payment processing logic here
+
               },
               child: Text('Process Payment'),
             ),

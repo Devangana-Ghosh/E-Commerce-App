@@ -2,9 +2,7 @@
 
 part of 'cart_item.dart';
 
-// **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
+
 
 class CartItemAdapter extends TypeAdapter<CartItem> {
   @override

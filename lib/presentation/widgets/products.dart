@@ -1,12 +1,8 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
-
 import 'package:flutter/material.dart';
-
 import '../Screen/checkout.dart';
 import 'package:hive/hive.dart';
-
 import 'cart_item.dart';
 
 
@@ -17,12 +13,12 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  late Box<CartItem> cartBox; // Initialize cartBox
+  late Box<CartItem> cartBox;
 
   @override
   void initState() {
     super.initState();
-    cartBox = Hive.box<CartItem>('cart'); // Initialize cartBox
+    cartBox = Hive.box<CartItem>('cart');
   }
 
   double getTotalPrice() {
@@ -146,14 +142,14 @@ class _ProductListState extends State<ProductList> {
       appBar: AppBar(
         title: Text('Products'),
         actions: <Widget>[
-          // Add a button to the AppBar
+
           IconButton(
-            icon: Icon(Icons.shopping_cart), // You can use any icon you prefer
+            icon: Icon(Icons.shopping_cart),
             onPressed: () {
-              // Navigate to the CartPage when the button is pressed
+
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CartPage()), // Replace 'CartPage()' with your actual cart page widget
+                MaterialPageRoute(builder: (context) => CartPage()),
               );
             },
           ),

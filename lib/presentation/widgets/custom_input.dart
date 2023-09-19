@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class CustomInput extends StatelessWidget {
   final String hintText;
-  final bool isPassword; // Add this parameter
+  final bool isPassword;
 
   CustomInput({
     required this.hintText,
-    this.isPassword = false, // Provide a default value
+    this.isPassword = false,
   });
 
   @override
@@ -21,7 +21,7 @@ class CustomInput extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: TextField(
-        obscureText: isPassword, // Use the isPassword parameter
+        obscureText: isPassword,
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: hintText ?? "HintText",
@@ -38,7 +38,7 @@ class CustomInput extends StatelessWidget {
 class Constants {
   static final TextStyle regularDarkText = TextStyle(
     fontSize: 16.0,
-    color: Colors.black, // Customize the color as needed
+    color: Colors.black,
     fontWeight: FontWeight.normal,
   );
 }
